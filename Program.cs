@@ -1,4 +1,5 @@
 ﻿using System;
+using Prototype.Factory;
 
 namespace prototype
 {
@@ -6,7 +7,11 @@ namespace prototype
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var unit1 = UnitFactory.newHumanUnit("Vasia", "small");
+            var unit2 = UnitFactory.newElfUnit("Masha", "middle");
+
+            Console.WriteLine(unit1);
+            Console.WriteLine(unit2);
         }
     }
 }
